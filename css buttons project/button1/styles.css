@@ -1,0 +1,43 @@
+
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    justify-content: center;
+    align-items: center; 
+}
+
+.button{
+   
+    justify-self: center;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    font-size: 18px;
+    box-shadow: 5px 5px 5px 0px #00003f;
+    position: relative;
+    /* perspective: 10px; */
+    z-index: 1;
+    cursor: pointer;
+}
+
+.button::before{
+    content: "";
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:all 1s;
+    z-index: -5;
+}
+
+.button:hover::before{
+    transform: scaleX(1);
+}
