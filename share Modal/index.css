@@ -1,0 +1,249 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    background: #000;
+    /* overflow-x: hidden; */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card{
+    background: #ffffff1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
+    width: 28%;    
+    border: 2px solid #ffffff30;;
+    border-radius: 1rem;
+    backdrop-filter: blur(15px);
+}
+
+.photo{
+    width: 160px;
+    height: 160px;
+    border-radius: 80%;
+    border: 2px solid #ffffff30;
+}
+
+.name{
+    color: white;
+    font-size: 30px;
+}
+
+.subheading{
+    color: #ffffff85;
+    font-size: 20px;
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+}
+.btn{
+    background: #ffffff1a;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    font: bold;
+    cursor: pointer;
+}
+
+.btn1{
+    width: 50%;
+}
+
+.btn2{
+    width: 50%;
+}
+
+.btn:hover{
+    background:#fff;
+    color: black;
+}
+.circle1 {
+    position: fixed;
+    top: 5%;
+    left: 30%;
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    animation: circle1Animate 15s infinite;
+  }
+  
+  @keyframes circle1Animate {
+    50% {
+      left: 33%;
+      top: 4%;
+      scale: 1.11;
+    }
+  }
+  
+  .circle2 {
+    position: absolute;
+    bottom: 5%;
+    right: 24%;
+    width:15em;
+    height: 15em;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    animation: circle2Animate 8s infinite;
+  }
+  @keyframes circle2Animate {
+    50% {
+      bottom: 6%;
+      right: 27%;
+    }
+  }
+
+.shareModal{
+    position: absolute;
+    left: 35%;
+    scale: 1.2;
+    width: 500px;
+    z-index: 5;
+    border: 1px solid white;
+    background: #000;
+    padding: 20px 25px;
+    border-radius: 20px;
+    scale: 0;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ffffff88;
+    align-items: center;
+}
+.modal-heading{
+    color: white;
+    font-size: 30px;
+}
+.modal-share{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.icon1{
+    color: white;
+    cursor: pointer;
+}
+
+.icon-container{
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ffffff88;
+    padding: 17px;
+    border-radius: 100%;
+    align-items: center;
+}
+
+.icon i{
+    font-size: 27px;
+}
+
+.icon-link{
+    border-color: white;
+}
+.icon-git{
+    border-color: white;
+}
+.icon-insta{
+    border-color: blue;
+}
+.icon-twitter{
+    border-color: blue;
+}
+.icon-face{
+    border-color: pink;
+}
+
+.active{
+    scale: 1;
+}
+
+.overlay {
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+    z-index: 0;
+  }
+.overlayactive{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+@media (max-width: 850px) {
+    .profile-card {
+      max-width: 250px;
+      width: 300px;
+    }
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .modal-share {
+      width: 70vw;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .profile-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .profile-card {
+      position: static;
+      top: 0;
+      left: 0;
+      translate: 0 0;
+      margin: 0 12px;
+      padding: 0 10px;
+    }
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+    }
+    .name h2 {
+      font-size: 1.3rem;
+    }
+    .modal-share {
+      width: 80vw;
+    }
+  }
